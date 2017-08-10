@@ -1,0 +1,52 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.barChartContainer {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	& > div {
+		& svg {
+			margin: 0 auto;
+    		display: block;
+			& > g {
+				/*position: absolute;*/				
+				& > g:not([transform]) {
+					& + g {
+						opacity: 0.15;
+					}
+				}				
+			}
+			& [class="tick"] {
+				& line {
+					display: none;
+				}
+				& text {
+					font-family: var(--preferred-font);
+					font-size: 14px;
+					color: rgba(0,0,0,0.6);
+				}
+			}
+		}
+		& + div {
+		    position: absolute;
+		    bottom: 0;
+		    padding: 0 32px;
+			width: 100%;
+			text-align: center;
+			& > p {
+				display: inline-block;
+				font-size: 14px;
+				font-weight: normal;
+				text-align: center;
+				line-height: 20px;
+				color: var(--primary-color);
+				text-align: left;
+				& .barChartEnrolmentText {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

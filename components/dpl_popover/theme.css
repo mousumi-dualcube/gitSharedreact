@@ -1,0 +1,88 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+/* #popoverMenu */
+
+li {
+	&[data-react-toolbox="dpl_popover"]:not(.disabled) {
+		& ul[data-react-toolbox="list"] {
+			& li {
+				& > span {
+					&:hover {
+						background-color: var(--primary-color);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+[data-react-toolbox="dpl_popover"] {
+	background: transparent;
+	& ul[data-react-toolbox="list"] {
+		& li {
+			width: 100%;
+			color: #656565;
+			&:hover {    
+				background-color: var(--primary-color);
+				color: #ffffff;
+				& span {
+					color: #ffffff;
+				}
+			}
+			&:active {
+				background-color: var(--active-color);
+				color: #ffffff;
+				& span {
+					color: #ffffff;
+				}
+			}
+			& > span {
+				min-height: 40px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				background: transparent;
+				&:hover {    
+					background-color: var(--primary-color);
+					color: #ffffff;
+					& span {
+						color: #ffffff;
+					}
+				}
+				&:active {
+					background-color: var(--active-color);
+					color: #ffffff;
+					& span {
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+/* For touch screen */
+[data-screen="touch"] {
+	[data-react-toolbox="dpl_popover"] {
+		& ul[data-react-toolbox="list"] {
+			& li {
+				&:hover {
+					background-color: transparent;
+					color: #656565;
+					& span {
+						color: #656565;
+					}
+				}
+				& > span {
+					&:hover {
+						background-color: transparent;
+						color: #656565;
+						& span {
+							color: #656565;
+						}
+					}
+				}
+			}
+		}
+	}
+}

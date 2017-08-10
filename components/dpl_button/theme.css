@@ -1,0 +1,321 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.downloadButton {
+  max-width: 362px;
+  & > a,
+  & > button {
+    &.neutral {
+      &.flat {
+        padding: 0;
+        display: table;
+        width: 100%;
+        text-transform: none;
+        word-wrap: break-word;
+        background-color: var(--primary-color);
+        box-shadow: var(--shadow-dpl);
+        &[data-alt="secondary"] {
+          &:not([disabled]) {
+            background-color: #FFFFFF;
+            box-shadow: var(--shadow-dpl);
+            color: #000;
+            border: 1px solid #F7F7F7;
+            & > span:first-child {
+              background-color: rgba(0,0,0,0.02);
+              border-right: 1px solid #E9E9E9;
+            }
+            &:hover {
+              border: 1px solid #F7F7F7;
+              color: #000;
+              background-color: #F7F7F7;
+              box-shadow: var(--shadow-dpl);
+              & > span:first-child {
+                border-right: 1px solid #E1E1E1;
+              }
+            }
+            &:active {
+              background-color: #E9E9E9;
+              border: none;
+              & > span:first-child {
+                background-color: rgba(0,0,0,0.06);
+                border-right: 1px solid #C9C9C9;
+              }
+            }
+          }
+        }
+        & > span {
+          display: table-cell;
+          float: none;
+          padding: 30px 16px;
+          line-height: 14px;
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 3px 0 0 3px;
+          margin-right: 0;
+          &.downloadButtonLabel {
+            white-space: normal;
+            text-align: left;
+            line-height: 25px;
+            font-family: "Source Sans Pro";
+            padding: 5px 20px;
+            line-height: 26px;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 3px 0 0 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+button,
+a {
+  & > span {
+    &:not([data-react-toolbox='ripple']) {
+      margin-right: 10px;
+    }
+  }
+  &.neutral {
+    &:not([disabled]) {
+      &.flat {
+        &:hover {
+          background: var(--hover-color);
+        }
+        &:focus,
+        &:focus:not(:active) {
+          background-color: var(--hover-color);
+        }
+      }
+    }
+    &.flat {
+    line-height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    vertical-align: baseline;
+    background: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 11px 34px;
+    &:hover {
+      background: var(--hover-color);
+    }
+      &:focus,
+    &:focus:not(:active) {
+      background-color: var(--hover-color);
+    }
+      &.iconbutton {
+        &.mini,
+        &[data-mini="mini"] {
+          width: 32px;
+          height: 32px;
+          font-size: 14px;
+          line-height: 16px;
+          & > span {
+            font-size: 1.7em;
+            font-weight: 600;
+            line-height: 10px;
+            padding: 0;
+            &:not([data-react-toolbox="ripple"]) {
+              display: block;
+            }
+          }
+        }
+      }
+      &.iconbutton {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        font-size: 0.34em;
+        border-width: 1px;
+        border-style: solid;
+        min-width: auto;
+        box-shadow: var(--icon-button-shadow);
+        vertical-align: super;
+        text-align: center;       
+        &:not([disabled]) {
+          background: transparent;
+          color: var(--primary-color);
+          border-color: var(--primary-color);
+        }
+        &[disabled] {
+          background: transparent;
+          color: #DBDBDB;
+          border-color: #DBDBDB;
+        }
+        & > span {
+          font-size: 5em;
+          font-weight: 600;
+          line-height: 20px;
+          margin-right: 0px;
+        }
+        &:not([data-mini="mini"]) {
+          & > span {
+            margin-top: -5px;
+          }
+        }
+        &[data-alt="secondary"] {
+          background: transparent;
+          color: var(--primary-color);
+          border: 1px solid var(--primary-color);
+          & > span {
+            line-height: 14px;
+          }
+          &:hover {  
+              background: var(--primary-color);
+              color: #ffffff;
+              border: 1px solid var(--primary-color);
+          }
+          &[disabled] {
+            border: 1px solid var(--primary-color);
+            color: #DBDBDB;
+            background: transparent;
+          }
+        }
+      }
+      &:not([disabled]) {
+        color: #FFFFFF;
+        background-color: var(--primary-color);
+        
+          &:hover {  
+            border: 1px solid var(--hover-color);
+            color: #ffffff;
+            background: var(--hover-color);
+          }
+        
+        &:active {
+          border: 1px solid var(--active-color);
+          background: var(--active-color);
+          color: #fff;
+        }
+      }
+      &.mini,
+      &[data-mini="mini"] {
+        padding: 8px 10px;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: none;
+        & > span {
+          font-size: 1.4em;
+          font-weight: 600;
+          line-height: 14px;
+          padding: 0;
+        }
+      }
+      &[data-alt="secondary"] {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        background: transparent;
+        text-transform: none;
+        
+          &:hover {  
+            border: 1px solid var(--primary-color);
+            color: #ffffff;
+            background: var(--primary-color);
+          }
+        
+        & > span {
+          line-height: 14px;
+        }
+        &:not([disabled]) {
+          color: var(--primary-color);
+          background-color: #FFFFFF;
+          border: 1px solid var(--primary-color);
+          
+            &:hover {  
+              border: 1px solid var(--hover-color);
+              color: #ffffff;
+              background: var(--hover-color);
+            }
+          
+          &:active {
+            border: 1px solid var(--active-color);
+            background: var(--active-color);
+            color: #fff;
+          }
+        }
+        &[disabled] {
+          border: 1px solid #DBDBDB;
+          color: #DBDBDB;
+          background: transparent;
+        }
+      }
+      &[disabled] {
+        background-color: #E9E9E9;
+        color: rgba(0,0,0,0.3);
+      }
+    }
+  }
+}
+@media screen and (width <= 420px) {
+  button,
+  a {
+    &.neutral {
+      &.flat {
+        padding: 16px 20px;
+      }
+    }
+  }
+}
+/* For touch screen */
+[data-screen="touch"] {
+  & button,
+  & a {
+    &.neutral {
+      &:not([disabled]) {
+        &.flat {
+          &:hover {
+            background: var(--primary-color);
+          }
+          &.iconbutton {
+            &:hover {
+              background: transparent;
+              color: var(--primary-color);
+              border: 1px solid var(--primary-color);
+            }
+            &[data-alt="secondary"] {
+              &:hover {
+                background: transparent;
+                color: var(--primary-color);
+                border: 1px solid var(--primary-color);
+              }
+            }
+          }
+          &[data-alt="secondary"] {
+            &:hover {
+              background: transparent;
+              color: var(--primary-color);
+              border: 1px solid var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  & .downloadButton {
+    & > a,
+    & > button {
+      &.neutral {
+        &.flat {
+          &[data-alt="secondary"] {
+            &:not([disabled]) {
+              &:hover {
+                box-shadow: var(--shadow-dpl);
+                background-color: #FFFFFF;
+                color: #000;
+                border: 1px solid #F7F7F7;
+                & > span:first-child {
+                  background-color: rgba(0,0,0,0.02);
+                  border-right: 1px solid #E9E9E9;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

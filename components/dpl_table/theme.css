@@ -1,0 +1,364 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.tableConatiner {  
+  padding: 20px 0px;
+  @media screen and (width <= 420px) {
+    position: relative;
+  }
+  & .tabelDescription {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 0px;
+    box-shadow: var(--shadow-dpl);
+    margin-right: 0px;
+    padding-left: 26px;
+    margin: 0px 4px;
+    & button {
+      margin-top: 9px;
+      width: 43px;
+      & span {
+        padding: 0px;
+      }
+    }
+    & div {
+      margin: 0px;
+      & span {
+        font-size: 17px;
+        line-height: 18px;
+        vertical-align: top;
+      }
+      & [data-react-toolbox="menu"] {
+        left: -13px;
+        top: 48px;
+        & li {
+          & span {
+            padding: 0px;
+          }
+          & > span {
+            padding: 0 16px;
+          }
+        }
+      }
+
+      & label {
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 34px;
+        color: #232323;
+      }
+
+      & a {
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--primary-color);    
+      }
+
+    }
+  }
+  & .tableResponsive {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    box-shadow: 0 1px 2px 0 rgba(194, 190, 190, .5);
+    margin: 0 2px;
+    &::-webkit-scrollbar {
+      width: 1em;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #A0A0A0;
+      outline: 1px solid #A0A0A0;
+      border-radius: 10px;
+    }    
+    & table {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0px;
+      background: #fff;      
+      box-shadow: var(--shadow-dpl);
+      & th {
+        min-width : 160px;
+        border-top: none;
+        border-right: 1px dashed #88DAED;
+        border-bottom: 1px solid #88DAED;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #232323;
+        vertical-align: top;
+        min-height: 80px;
+        height: 48px;
+        padding: 0 24px;
+        &:first-child {
+          min-width: 250px;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+      & td {
+        border : none;
+        border-right: 1px dashed #88DAED;
+        padding: 24px;
+        opacity: 0.63;
+        font-size: 18px;
+        line-height: 27px;
+        color: #000000;
+       
+        &:first-child {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          color: #232323;
+          opacity: 1;
+          &:last-child {
+            color: var(--primary-color);
+          }
+        }
+        &:last-child {
+          border-right: none;
+        }        
+      }
+      & tr {
+        &:hover {
+          background-color: transparent;
+        }
+        &:nth-child(even) {
+          background-color: #F4FCFF;          
+        }
+        & th:first-child,
+        & td:first-child {
+          padding-left: 40px;
+        }
+        &:last-child {
+          background-color: transparent;
+          & td {
+            opacity: 1;
+            &:first-child {
+              color: var(--primary-color);
+              font-weight: normal;
+            }
+          }
+        }
+      }
+      & tbody {
+        & tr {
+          &:last-child {
+            border-top: 1px solid #C1E4F6;
+          }
+        }
+      }
+    }
+    &.collapsibleTableResponsive {
+      & table {
+        & thead {
+          & tr {
+            & th {
+              vertical-align: middle;
+              min-width: auto;
+            }
+          }
+        }
+        & tbody {
+          & tr {
+            & td {
+              padding-left: 0;
+              padding-top: 0;
+              padding-right: 0;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  } 
+  & .subHeading {
+    margin-bottom: 20px;
+  }
+  & .tabelDescription {
+    &:after,
+    &:before {
+      content: "";
+      clear: both;
+      display: table;
+    }  
+    & .titleSetting {
+      & > div {
+        float: left;
+        & .labelClass {
+          width: 82%;
+          & label {
+            display: inline-block;
+            &.subHead {
+              font-size: 18px;
+              line-height: 27px;
+              color: #000000;
+              opacity: 0.6;
+              padding-left: 46px;
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+.collapsibleTableResponsive {
+  & table {
+    font-family: var(--preferred-font);
+    margin-bottom: 0px;
+    & thead {
+      white-space: normal;
+      word-break: break-word;
+      & tr:not(.iscollapsed) {
+        & th:first-child {
+          padding-top: 23px;
+          padding-bottom: 23px;
+        }
+      }
+    }
+    & tbody {
+      word-break: break-word;
+    }
+    & tr {
+      height: 0;
+      &:last-child {
+        border-top: 1px solid #C1E4F6;
+        & td {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          color: #232323;
+        }
+      }
+      &:first-child {
+        border-top: none;
+      }
+      &.iscollapsed {
+        & th {
+          border-bottom: none;
+          &:nth-child(3) {
+            & p {
+              & span {
+                &:last-child {
+                  opacity: 0.4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    & td {
+      opacity: 1;
+      font-weight: normal;
+      height: 0px;
+      &:nth-child(odd) {
+        color: #000;
+        opacity: 0.4;
+      }
+      &:nth-child(even) {
+        color: #000;
+        opacity: 0.63;
+      }
+      &:first-child {
+        opacity: 1;
+        & a {
+          text-decoration: none;
+          font-size: 18px;
+          line-height: 27px;
+          color: var(--primary-color);
+        }
+      }
+    }
+    & th {
+      padding: 0px 24px;
+      &.addPad {
+        &:first-child {
+          padding-top: 23px;
+          padding-bottom: 23px;
+        }
+      }
+      &,
+      & label {
+        cursor : pointer;
+      }
+      & label {
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 34px;
+        color: #232323;
+      }
+      & p {
+        margin-top: 10px;
+        & span {
+          &.headerSpan {
+            display: block;
+            line-height: 27px;
+            color: #000000;
+          }
+          &.hidden {
+            visibility: hidden;
+          }
+        }
+      }
+      & .tableHeading {
+        margin : 0px;
+        & span {
+          font-size: 17px;
+          line-height: 18px;
+          vertical-align: top;
+          padding: 9px 10px 0px 0px;
+        }
+      }
+    }
+  }
+  & .animated {
+    & tbody {
+      & tr {        
+        & td  {
+          &:first-child {
+            &> div {
+              & > span {
+                padding: 24px 10px 24px 40px;
+              }
+            }
+          }
+          &> div {
+            -webkit-transition: max-height 500ms ease;  
+            -moz-transition: max-height 500ms ease;  
+            -o-transition: max-height 500ms ease;  
+            -ms-transition: max-height 500ms ease;  
+            transition: max-height 500ms ease;
+            overflow: hidden;
+            max-height: 0; 
+            & > a ,
+            & > span { 
+              padding: 24px 10px 24px 24px;
+              display: inline-block;
+            }
+            & > span {
+              padding-left: 24px;
+            }
+          }
+        }
+      }
+    }
+    &.stopanimated {
+      & tbody {
+        & tr {
+          & td  {
+            font-weight: normal;
+            &> div {              
+              max-height: 100px;              
+            }
+          }
+        }
+      }
+    }
+  }
+}

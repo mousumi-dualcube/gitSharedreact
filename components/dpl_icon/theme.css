@@ -1,0 +1,21 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.renderIconStyle {
+	color: var(--icon-basic-color);
+	&:hover {
+		color: var(--primary-color);
+	}
+	&:active {
+		color: var(--active-color);
+	}
+}
+/* For touch screen */
+[data-screen="touch"] {
+	& .renderIconStyle {
+		&:hover {
+			color: var(--icon-basic-color);
+		}
+	}
+}

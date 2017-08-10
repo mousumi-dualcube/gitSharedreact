@@ -1,0 +1,11 @@
+[
+  { "name": "buttons", "type" : "product", "imagePath" : "iconography.png", "href":"/", "title": "Buttons", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "formElements", "type" : "product", "imagePath": "iconography.png", "href":"/formelement", "title": "Form elements", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "images", "type" : "product", "imagePath": "iconography.png", "href":"/", "title": "Images", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "feedback", "type" : "feature", "imagePath": "iconography.png", "href":"/", "title": "Feedback", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "typography", "type" : "feature", "imagePath": "iconographyaphy.png", "href":"/", "title": "Typography", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "iconography", "type" : "feature", "imagePath": "iconographyraphy.png", "href":"/", "title": "Iconography", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "link", "type" : "template", "imagePath": "iconography.png", "href":"/", "title": "Link", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "popover", "type" : "template", "imagePath": "iconography.png", "href":"/", "title": "Popover", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" },
+  { "name": "modal", "type" : "template",  "imagePath": "iconography.png", "href" :"/", "title": "Modal", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem elit", "version": "V1", "date": "27.01.17" }
+]

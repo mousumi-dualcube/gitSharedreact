@@ -1,0 +1,29 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.collapsible { 
+	& .collapsibleTrigger {
+		& .isOpen {
+			background: transparent;
+		}
+		& .isClosed {
+			background: transparent;
+		}
+		& [data-dir="left"] {
+			float: left;
+		}
+		& [data-dir="right"] {
+			float: right;
+		}
+	}
+	& .collapsibleContentOuter {
+		width: 100%;
+		& .collapsibleContentInner {
+			background: transparent;
+			& *:empty {
+				display: inline
+			}
+		}
+	}
+}

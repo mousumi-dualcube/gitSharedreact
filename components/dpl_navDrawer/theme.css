@@ -1,0 +1,117 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.sidebarContainer {
+	width: 260px;
+	border: none;
+	& .navClose {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    background-color: #635f5f;
+	    padding: 6px 9px;
+	    color: #fff;
+	}
+	& ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		& .logo {
+			max-width: 100%
+		}
+		& li {
+		    &:first-child {
+		    	position: relative;
+		    }
+			&.active {
+			    list-style-type: disc;
+				color: red;
+				list-style-position: inside;
+				padding: 0 30px 0 60px;
+			}
+		}
+		&.sidebarNav {
+			background: #FFFFFF;
+		    transition: all 0.5s ease;
+		    border: none;
+			& .sidebarBrand {
+				background: #323232;
+				text-align: center;    
+				border: 0;
+				padding: 19px 0;
+			}
+			& li {
+				line-height: 23px;
+		        color: #3D3D3D;
+		        font-weight: 600;
+		        font-size: 18px;
+		        & a {
+		        	color: #3D3D3D;
+		        	text-decoration: none;
+
+		        }
+    			& [data-active="true"]:not(ul) {
+    				position: relative;
+    				&:before {
+					    content: " ";
+					    width: 7px;
+					    height: 7px;
+					    display: inline-block;
+					    background-color: var(--hover-color);
+					    border-radius: 50%;
+					    float: left;
+					    vertical-align: -50%;
+					    position: absolute;
+					    top: 32px;
+    					left: 20px;
+	    			}
+	    		}
+	    		& a[data-active="true"]:not(ul) {
+    				&:before {
+    					top: 16px;
+    					left: 40px;
+    				}
+    			}
+		        & [data-react-dpl="collapsible"] {
+		        	border-bottom: 1px solid #F1F1F1;
+	        		&[data-status='isOpen'] {
+	        			background-color: #FAFAFA;
+	        			position: relative;
+	        		}
+		        	&:hover {
+		        		background-color: #FAFAFA;
+		        	}
+		        	& > span {
+		        		display: block;
+		        		padding: 23px 40px;
+		        		cursor: pointer;
+		        		position: relative;
+		        		& > span {
+		        			float: right;
+		        			line-height: 23px;
+	        			    position: absolute;
+							right: 22px;
+							top: 25px;
+		        		}
+		        	}
+		        	& ul { 
+		        		padding-bottom: 30px;
+			        	& li {
+			        		& a {
+				        		line-height: 35px;
+				        		color: #626262;
+				        		padding: 0 30px 0 60px;
+				        		font-weight: 400;
+				        		&.active {
+				        			color: red;
+				        		}
+			        		}
+			        		
+			        	}
+			        }
+		        }
+			}
+		}
+	}
+}

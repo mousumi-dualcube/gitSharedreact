@@ -1,0 +1,31 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+[data-react-toolbox="link"] {
+	&.dplLink {
+		color: var(--primary-color);
+		opacity: 1;
+		text-decoration: none;
+	    display: inline;
+		&:hover {
+			color: var(--hover-color);
+		}
+		&:active {
+			color: var(--active-color);
+		}
+	}
+	&.semiBold {
+		font-weight: 600;
+	}
+}
+/* For touch screen */
+[data-screen="touch"] {
+	[data-react-toolbox="link"] {
+		&.dplLink {
+			&:hover {
+				color: var(--primary-color);
+			}
+		}
+	}
+}

@@ -1,0 +1,290 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.flipCard {
+	display: inline-block;
+	min-height: 340px;
+	& > div {
+		width: 80%;
+		margin: 0 auto;
+		& > div {			
+			&:after,
+			&:before {
+				content: '';
+				clear: both;
+			}
+			& > div {
+				position: absolute;
+			}
+		}
+	}
+}
+
+.cardDesciption {
+	padding : 0.5em 1.1rem;
+  height: 200px;
+	& p {
+		opacity: 0.63;	
+		color: #000000;	
+		font-family: var(--preferred-font);
+		font-size: 18px;	
+		line-height: 27px;
+	}
+}
+.CardContainer {
+	& div {
+		&:focus {
+			outline-style : none;
+		}
+	}
+	& .cardDesciption {
+		padding : 0;
+
+		& p {
+			margin: 0px;
+			margin-top: 10px;
+			line-height: 27px;
+			margin-right: 10px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		& [data-react-toolobox="dashletCardDesciption"] {
+			& > div:last-child {
+			    opacity: 0.58;
+			    background-color: #D8D8D8;
+			    border-radius: 52px;
+			}
+		}
+		& > div {
+			padding : 0px 20px;
+		}
+	}
+
+	& .chartCard {
+		background: #fff;
+		box-shadow: var(--shadow-dpl);
+		border-radius: 3px;
+		float: left;
+		font-style: var(--preferred-font);
+		min-height: 278px;
+		&:hover {
+			-webkit-box-shadow: var(--shadow-hover-dpl);
+			-moz-box-shadow: var(--shadow-hover-dpl);
+			box-shadow: var(--shadow-hover-dpl);
+		}
+		& .chartTitle {
+			padding: 5px 10px 0px 10px;
+			& button {
+				display: inline-block;
+			    line-height: 1;
+			    font-size: 20px;
+			    opacity: 1;
+			    text-align: right;
+			    width: 12%;
+			    padding-right: 15px;
+			    border: none;
+			    background: transparent;
+			    cursor: pointer;
+			    margin: 0;
+			    &:focus {
+			      outline-style : none;
+			    }
+			}
+			& h2 {
+				color: #232323;
+			    display: inline-block;
+			    padding: 0.5em 1.1rem;
+			    margin: 0px;
+			    width: 88%;
+			    font-size: 27px;		    
+			}
+		}
+	}	
+
+  & [data-react-toolbox="card"][pattern="grid"]  {
+    padding: 0px !important;
+    background: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    & label {
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 34px;
+      color: #232323;  
+    }
+
+    & a {
+      display: block;
+      text-decoration: none;    
+    }
+
+    & img {
+      width: 100%;
+      display: block;
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+
+     &:last-child {
+      margin-right: 0px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+    &:nth-child(3n+1) {
+      margin-left: 0px;
+    }
+    & .description {
+      border-bottom: 1px solid #EDEDED;
+
+      & label {
+         display: block;
+         padding: 15px 25px 5px 27px;
+      }
+      & p {
+        padding: 5px 25px 25px 0px;
+        color: #000;
+        margin: 0px;
+        font-size: 18px;
+        display: block;
+        opacity: 0.63;
+      }
+    }
+    & .buttons {
+      padding: 25px 30px !important;  
+      border-radius: 5px;
+    }
+    & .buttons i { 
+      opacity: 0.5; 
+      font-family: FontAwesome;
+      font-size: 18px;
+      line-height: 18px;
+      color: #232323;  
+    }
+    & .buttons > span {
+      display: inline-block;
+      width: 50%;
+    }
+    & .buttons span label {
+      padding-left: 10px;
+      opacity: 0.4;
+      font-size: 27px;
+      line-height: 27px;
+      color: #000000;
+      font-weight: 100;
+      display: inline;
+    }
+    & .text_bold {
+      & h5 {
+        font-weight: bold !important;
+        color: #232323;
+      }
+    }
+  }
+  & [data-react-toolbox="card"][pattern="list"] {
+    width : 100%;
+    clear : both;
+    margin-left : 0px;
+
+    & .description {
+      border-bottom: none;
+    }
+    & .buttons {
+      padding: 0px 18px 0px !important;
+      border-radius: 5px;
+    }
+    & .text_bold {
+      & h5 {
+        font-weight: bold !important;
+        color: #232323;
+      }
+    }
+    & .buttons i { 
+      opacity: 0.5; 
+      font-family: FontAwesome;
+      font-size: 18px;
+      line-height: 18px;
+      color: #232323;  
+    }
+    & .buttons > span {
+      padding-right: 30px;
+    }
+    & .buttons span label {
+      padding-left: 10px;
+      opacity: 0.4;
+      font-size: 27px;
+      line-height: 27px;
+      color: #000000;
+      font-weight: 100;
+      display: inline;
+    }
+    & .buttons span label {
+      font-size: 18px;
+    }
+    & a {
+      display: block;
+      text-decoration: none;  
+      & .CardMediaOption {
+        display: block;
+        width: 100%;
+        overflow: auto;
+      }
+    }    
+    & .ListCardMedia {
+      width: 30%;
+      float: left;
+    }
+    & .CardDetails {
+      width: 70%;
+      float: right;
+    }
+    & p {
+      padding: 5px 25px 25px 0px;
+      color: #000;
+      margin: 0px;
+      font-size: 18px;
+      display: block;
+      opacity: 0.63;
+    }
+  }
+}
+.CardContainer > div {
+	width: 100%;
+	& > div {
+		width: 100%;
+		& [class="ReactFlipCard__Flipper"] {
+			& [class="ReactFlipCard__Front"],
+			& [class="ReactFlipCard__Back"] {
+			    width: 100%;
+			    & > div {
+			    	width: 100%;
+    				float: none;
+			    }
+			}
+		}
+	}
+}
+@media screen and (width <= 420px) {
+	.flipCard {
+		& > div {
+			& > div {
+			    margin-left: 0;
+			}
+		}
+	}
+}
+@media screen and (width < 340px) {
+  .CardContainer {
+    & [data-react-toolbox="card"][pattern="grid"] {
+      & .buttons {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+@import './react-datepicker.css';
+
+.calendarBlock {
+	& [class="react-datepicker dplCalendar"] {
+		border: none;
+    	background-color: #F6F6F6;
+    	& > a {
+		    width: 10px;
+		    height: 10px;
+		    border-top: 3px solid var(--primary-color);
+		    border-bottom: 0px solid transparent;
+		    border-left: 3px solid var(--primary-color);
+		    border-right: 0px solid transparent;
+		    transform: rotate(-45deg);
+		    margin-top: 6px;
+		    & + a {
+		    	transform: rotate(-225deg);
+		    }
+    	}
+    	& [class="react-datepicker__month-container"] {
+    		margin: 0px;
+    		& [class="react-datepicker__header"] {
+    			background: #F6F6F6;
+    			border: none;
+    			& [class="react-datepicker__current-month"] {
+    				color: #232323;
+    				font-family: "Source Sans Pro";
+    				font-size: 18px;
+    				font-weight: 600;
+    				line-height: 28px;
+    				text-align: center;
+    			}
+    			& [class="react-datepicker__day-names"] {
+    				color: #000000;
+    				font-family: "Source Sans Pro";
+    				font-size: 12px;
+    				font-weight: 600;
+    				line-height: 15px;
+    				text-align: center;
+    				text-transform: uppercase;
+    			}
+    		}
+    	}
+	}
+}
+
+.calendarIcon {
+  float: left;
+  padding: 9px;
+  border-right: 1px solid #E9E9E9;
+  background-color: #FAFAFA;
+  &.open {
+		color: #fff !important;
+		background-color: #3392D3;
+	}
+}

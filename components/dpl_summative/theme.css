@@ -1,0 +1,76 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+.summativeChartContainer {
+	width: auto;
+    margin-top: 15px;
+	& table {
+		padding: 12px;
+	    width: 100%;
+	    border-collapse: collapse;
+	    border-spacing: 0;
+
+		& tr {
+			padding: 12px;					
+			&:nth-child(odd) {
+				background-color: #F4FCFF;
+			}	
+			&:nth-child(even) {
+				background-color: #fff;
+			}	
+			& td {
+				& span {
+					&:last-child {
+						opacity: 0.6;
+					}
+				}
+			}
+			&:last-child {
+				& span.currency,
+				& span.rowTitle,
+				& i {
+					color: var(--primary-color);
+				}
+				& td {					
+					&:last-child {
+						& span {
+							font-weight: 600;
+							opacity: 1;
+						}
+					}
+				}
+			}			
+		}
+		& td {
+			padding: 12px 20px;
+			font-size: 18px;
+			& span {
+			 	display: block;
+			}
+			& i {
+				display: inline;
+				padding-right: 5px;
+				line-height: 27px;
+				color: #000000;
+				font-weight: normal;
+			}
+			& span.currency {
+				display: inline;
+				line-height: 27px;
+				color: #000000;
+			}
+			& span.rowDate {
+				font-size: 12px;
+				line-height: 15px;
+				color: #888888;
+			}
+			& span.rowTitle {
+				font-weight: 600;
+				line-height: 28px;
+				color: #232323;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,112 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+[data-react-toolbox="dropdown"].dplDropdown {
+	background: #ddd;
+	box-shadow: var(--shadow-dpl);
+	border-radius: 3px;	
+	font-size: 18px;
+	font-family: "Source Sans Pro";
+	font-weight: 600;
+	display: inline-block;
+    min-width: 225px;
+    & > ul > *:hover:not(.disabled) {
+    	background-color: var(--primary-color);
+    }
+
+	& > ul {
+		top: 100% !important;
+		z-index: 99;
+		& li {
+			width: 100%;
+			color: #000;
+			font-size: 18px;
+			font-weight: normal;
+			padding-left: 20px;
+			&:hover {    
+				background-color: var(--primary-color);
+				color: #ffffff;
+				& span {
+					color: #ffffff;
+				}
+			}
+			&:active {
+				background-color: var(--active-color);
+				color: #ffffff;
+				& span {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+	& [data-react-toolbox='input'] {
+		padding: 0;
+		opacity: 1;
+		&:after {
+			border: none;   
+    		height: 48px;
+    		right: 0;
+    		top: -1px;
+    		width: 60px;
+    		background: #FAFAFA;
+    		border: 1px solid #E9E9E9;
+    	}
+    	&:before {
+		    border-left: 6px solid transparent;
+		    border-right: 6px solid transparent;
+		    border-top: 6px solid #232323;
+		    content: '';
+		    height: 0;
+		    pointer-events: none;
+		    position: absolute;
+		    right: 25px;
+		    top: 46%;
+		    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+		    transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+		    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+		    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+		    width: 0;
+		    z-index: 1;
+    	}
+		& input {
+			padding: 13px 0px;
+		    background: #fff;
+		    opacity: 1;
+		    padding-left: 20px;
+		    color : #232323;
+		    font-family: "Source Sans Pro";
+			font-weight: 600;
+			font-size: 18px;
+		    &:hover {
+				background-color: #F7F7F7;
+			}
+			&:not([value='']) {
+				& ~ label {
+					display: none;
+				}
+			}
+		}
+		& label {
+			top: 4px;
+			padding: 13px 0px;
+		    opacity: 1;
+		    padding-left: 20px;
+		    color : #232323;
+		    font-family: "Source Sans Pro";
+			font-weight: 600;
+			font-size: 18px;
+		}
+	}
+	&.dplDropdownDisabled {
+		& [data-react-toolbox='input'] {
+			& input,
+			& label {
+				color: rgba(0, 0, 0, 0.2);
+			}
+			&:before {
+				opacity: 0.2;
+			}
+		}
+	}
+}

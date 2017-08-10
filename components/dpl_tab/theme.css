@@ -1,0 +1,49 @@
+@import '../colors.css';
+@import '../variables.css';
+@import './config.css';
+
+[data-react-toolbox="dplTab"] {
+	& section {
+		& > div {
+			& div:nth-child(2) {
+				display: none;
+			}
+			& div:last-child {
+				opacity: 0.58;
+			    background-color: #D8D8D8;
+			    border-radius: 52px;
+			    & > div {
+			    	background-color: #A0A0A0 !important;
+			    }
+			}
+		}
+		& > section {
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+	}	
+	& nav {
+		margin-right: -17px;
+	    margin-left: -17px;
+	    padding-right: 17px;
+	    padding-left: 17px;
+		&> span {
+			background-color: #0077C8;
+			display: none;
+		}
+		& > div[data-react-toolbox="tab"] {
+			color: #0077C8 ;
+		    text-transform: none;
+		    font-size: 18px;
+		    font-weight: 600;
+		    display: table-cell;
+		    text-align: left;
+		    line-height: 20px;
+		    padding-top: 0px;
+		    margin-left: 10px;
+			&[data-active="true"] {
+		    	border-bottom: 2px solid #0077C8;
+		   	}
+		}
+	}
+}
